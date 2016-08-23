@@ -1,0 +1,81 @@
+/*通用标签样式*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { margin: 0; padding: 0; box-sizing:border-box;-webkit-box-sizing:border-box}
+h1,h2,h3,h4,h5,h6{ 
+	font-weight: 100;
+}
+ol, ul { 
+	list-style: none 
+}
+i { 
+	font-style: normal; 
+}
+a { 
+	color: #666; 
+}
+a, a:hover , a:active {
+	text-decoration: none;
+}
+img { 
+	display: block; 
+}
+button{
+	font-family: "microsoft yahei", "Arial";
+}
+/*根部样式*/
+html { 
+	font-family: "microsoft yahei", "Arial"; 
+	-webkit-text-size-adjust: 100%; 
+	-ms-text-size-adjust: 100%; 
+	font-size: 62.5%;  /*1em */
+}
+
+body { 
+	min-width: 320px;
+	background: #64cce5;
+}
+
+/*主体部分样式*/
+.container{
+	margin:0 auto;
+}
+		
+/*banner部分*/
+.banner{
+	position: relative;
+	width:100%;
+	height:auto;
+}
+/*banner 主体*/
+.banner_content{
+	position: absolute;
+	top:2.625rem;
+	left:7rem;
+	right:5.8rem;
+
+}
+/*读第一张banner图*/
+.banner1{
+	margin-bottom: -1rem;
+}
+.banenr3{
+	margin-top:0.5625rem;
+}
+/*主要内容*/
+.main{
+	position: relative;
+}
+.Howsend{
+	color: #323232;
+    position: absolute;
+    font-weight: bold;
+    top: -2rem;
+    left: 4.315rem;
+    font-size: 1.5rem;
+}
+.ActivityTime{
+	    position: absolute;
+	    right: 2.5625rem;
+	    color: #ffffff;
+	    top: -2.2rem;
+	    font-size: 1.2rem;
+}
