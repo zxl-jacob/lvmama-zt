@@ -134,7 +134,7 @@ body {
     top: -3.3rem;
     left: 4rem;
     font-size: 1.5rem;
-    width: 11rem;
+    width: 10rem;
     height:3.4rem;
     background: url('../image/pic.png');
     background-size: 100% 100%;
@@ -142,6 +142,7 @@ body {
 .Howsend span{
 	position: relative;
     top: 30%;
+    bottom: 0;
 }
 @media (device-height:568px) and (-webkit-min-device-pixel-ratio:2){
 	.Howsend{
@@ -150,9 +151,9 @@ body {
 		position: absolute;
 		font-weight: bold;
 		top: -3.3rem;
-		left: 1.315rem;
+		left: 2.315rem;
 		font-size: 1.5rem;
-		width: 19rem;
+		width: 9rem;
 		height:3.4rem;
 		background: url('../image/pic.png');
 		background-size: 100% 100%;
@@ -161,7 +162,7 @@ body {
 /*时间*/
 .ActivityTime{
 	    position: absolute;
-	    right: 1.5rem;
+	    right: 2rem;
 	    color: #ffffff;
 	    top: -2.5rem;
 	    font-size: 1.2rem;
@@ -201,8 +202,8 @@ body {
 	.dotted{
 		width: 78.3%;
 		margin:0 auto;
-		background: url('../image/dotted.png') repeat;
-		height: 0.5rem;
+		background: url('../image/dotted.png') repeat-x;
+		height: 0.6rem;
 	}
 	/*按钮图标通用样式*/
 	.btn{

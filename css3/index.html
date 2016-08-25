@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .div{
+            position: relative;
+            margin-left: 10px;
+            width: 160px;
+            height: 160px;
+            background-color: #6AC5AC;
+            border-radius: 5px;
+            float: left;
+            z-index: 1;
+            margin-top: 10px;
+        }
+        .rotateplane{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -40px;
+            margin-left: -40px;
+            border-radius: 10px;
+            width: 80px;
+            height: 80px;
+            background-color: greenyellow;
+            opacity: 1;
+            animation: rotateplane 5s infinite ease-in-out;
+        }
+        @keyframes rotateplane {
+        0% {transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);}
+        50% {transform: rotateX(180deg) rotateY(0deg) rotateZ(180deg);}
+        100% {transform: rotateX(180deg) rotateY(180deg) rotateZ(0deg);}
+        }
+        .bounce1,.bounce2,.bounce3,.bounce4,.bounce5{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -40px;
+            margin-left: -40px;
+            background-color: #fff;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            opacity: 0.4;
+            animation: bounce 3s infinite ease-in-out;
+        }
+        @keyframes bounce {
+            0% {transform: scale(0);}
+            50% {transform: scale(1);}
+            100% {transform: scale(0);}
+        }
+        .bounce1{
+            animation-delay: 0.2s;
+        }
+        .bounce2{
+            animation-delay: 0.4s;
+        }
+        .bounce3{
+            animation-delay: 0.6s;
+        }
+        .bounce4{
+            animation-delay: 0.8s;
+        }
+        .bounce5{
+            animation-delay: 1s;
+        }
+        .div-wrap{
+            position: absolute;
+            width: 80px;
+            height: 60px;
+            margin-left: -40px;
+            margin-top: -30px;
+            top:50%;
+            left: 50%;
+        }
+        .rectangle-bounce1,.rectangle-bounce2,.rectangle-bounce3,.rectangle-bounce4,.rectangle-bounce5{
+            margin-right: 5px;
+            float: left;
+            width: 8px;
+            height: 20px;
+            background-color: #fff;
+            animation: rectangle 1.2s infinite ease-in-out;
+        }
+        @keyframes rectangle {
+            0% {transform: scaleY(1);}
+            20% {transform: scaleY(3);}
+            40% {transform: scaleY(1);}
+            100% {transform: scaleY(1);}
+        }
+        .rectangle-bounce1{
+            animation-delay: 0.1s;
+        }
+        .rectangle-bounce2{
+            animation-delay: 0.2s;
+        }
+        .rectangle-bounce3{
+            animation-delay: 0.3s;
+        }
+        .rectangle-bounce4{
+            animation-delay: 0.4s;
+        }
+        .rectangle-bounce5{
+            animation-delay: 0.5s;
+        }
+        .div-wrap1{
+            position: relative;
+            width: 120px;
+            height: 120px;
+            margin-top: -60px;
+            margin-left: -60px;
+            top:50%;
+            left: 50%;
+        }
+        .throwing1,.throwing2{
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
+            animation: throwing 2s infinite ease-in-out;
+        }
+        .throwing2{
+            animation-delay: 1s;
+        }
+        @keyframes throwing {
+            0%  {transform: translateX(0px) translateY(0px) rotateZ(0deg) scale(1);background-color: red;}
+            25% {transform: translateX(100px) translateY(0px) rotateZ(90deg) scale(0.4);background-color: #0000cc;}
+            50% {transform: translateX(100px) translateY(100px) rotateZ(180deg) scale(1);background-color: gold;}
+            75% {transform: translateX(0px) translateY(100px) rotateZ(270deg) scale(0.4);background-color: indigo;}
+            100% {transform: translateX(0px) translateY(0px) rotateZ(360deg) scale(1);background-color: red;}
+        }
+        .div-wrap2{
+            width:60px;
+            height: 60px;
+            position: absolute;
+            top:50%;
+            left: 50%;
+            margin-left: -30px;
+            margin-top: -30px;
+        }
+        .boom1{
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            opacity: 1;
+            background-color:#fff;
+            animation:boom 1s infinite ease-in-out;
+        }
+        @keyframes boom {
+            0% {transform: scale(0);opacity: 1;}
+            80% {transform: scale(1);opacity: 0;}
+            100% {transform: scale(0);opacity: 0;}
+        }
+        .div-wrap3{
+            width: 40px;
+            height: 100px;
+            position: absolute;
+            top:50%;
+            left: 50%;
+            margin-left: -20px;
+            margin-top:-50px;
+        }
+        .div-wrap3{
+            animation-name: rotating-div;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        @keyframes rotating-div {
+            0% {transform: rotateZ(0deg);}
+            50% {transform: rotateZ(180deg);}
+            100%{transform: rotateZ(360deg);}
+        }
+        .rotating1,.rotating2{
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            opacity: 1;
+            background-color: #fff;
+            animation-name: rotating;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        .rotating1{
+            top: 0;
+        }
+        .rotating2{
+            animation-delay: 1s;
+            bottom: 0;
+        }
+        @keyframes rotating {
+            0% {transform: scale(0);}
+            50% {transform: scale(1);}
+            100% {transform: scale(0);}
+        }
+        .div-wrap4{
+            width: 100px;
+            height: 20px;
+            position: absolute;
+            top:50%;
+            left: 50%;
+            margin-left: -50px;
+            margin-top: -10px;
+        }
+        .load1,.load2,.load3{
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            float: left;
+            margin-right: 5px;
+            background-color: #fff;
+            animation-name: load;
+            animation-duration: 1.5s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+        }
+        .load1{
+            animation-delay: -0.4s;
+        }
+        .load2{
+            animation-delay: -0.2s;
+        }
+        .load3{
+            animation-delay: 0s;
+        }
+        @keyframes load {
+            0% {transform: scale(0);}
+            45%{transform: scale(1);}
+            90%{transform: scale(0);}
+            100%{transform: scale(0);}
+        }
+        .div-wrap5{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            top:50%;
+            left: 50%;
+            margin-top: -50px;
+            margin-left: -50px;
+        }
+        .div-wrap5>div{
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: #fff;
+            animation-name: circling;
+            animation-duration: 1.6s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+        .div-wrap5-div1{
+            position: absolute;
+            top:0;
+            left: 42px;
+            animation-delay: -1.6s;
+        }
+        .div-wrap5-div2{
+            position: absolute;
+            top:12.5px;
+            left: 71.5px;
+            animation-delay: -1.4s;
+        }
+        .div-wrap5-div3{
+            position: absolute;
+            top:42px;
+            left: 84px;
+            animation-delay: -1.2s;
+        }
+        .div-wrap5-div4{
+            position: absolute;
+            top:71.5px;
+            left: 71.5px;
+            animation-delay: -1s;
+        }
+        .div-wrap5-div5{
+            position: absolute;
+            top:84px;
+            left: 42px;
+            animation-delay: -0.8s;
+        }
+        .div-wrap5-div6{
+            position: absolute;
+            top:71.5px;
+            left: 12.5px;
+            animation-delay: -0.6s;
+        }
+        .div-wrap5-div7{
+            position: absolute;
+            top:42px;
+            left: 0;
+            animation-delay: -0.4s;
+        }
+        .div-wrap5-div8{
+            position: absolute;
+            top:12.5px;
+            left: 12.5px;
+            animation-delay: -0.2s;
+        }
+        @keyframes circling {
+            0% {transform: scale(0);}
+            50%{transform: scale(1);}
+            100%{transform: scale(0);}
+        }
+        .div-wrap6{
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            top:50%;
+            left: 50%;
+            margin-top: -30px;
+            margin-left: -30px;
+        }
+        .div-wrap6 *{
+            margin: 0;
+            padding: 0;
+        }
+        .div-wrap6>ul{
+            float: left;
+        }
+        .div-wrap6 li{
+            list-style-type: none;
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
+            animation-name:starting;
+            animation-duration: 1.3s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+        .div-wrap6-li1{
+            animation-delay: 0s;
+        }
+        .div-wrap6-li2{
+            animation-delay: 0.1s;
+        }
+        .div-wrap6-li3{
+            animation-delay: 0.2s;
+        }
+        .div-wrap6-li4{
+            animation-delay: 0.3s;
+        }
+        .div-wrap6-li5{
+            animation-delay: 0.4s;
+        }
+        @keyframes starting {
+            0% {transform: scale(1);}
+            35% {transform: scale(0);}
+            70% {transform: scale(1);}
+            100% {transform: scale(1);}
+        }
+    </style>
+</head>
+<body>
+<div class="div">
+    <div class="rotateplane"></div>
+</div>
+<div class="div">
+    <div class="bounce1"></div>
+    <div class="bounce2"></div>
+    <div class="bounce3"></div>
+    <div class="bounce4"></div>
+    <div class="bounce5"></div>
+</div>
+<div class="div">
+    <div class="div-wrap">
+        <div class="rectangle-bounce1"></div>
+        <div class="rectangle-bounce2"></div>
+        <div class="rectangle-bounce3"></div>
+        <div class="rectangle-bounce4"></div>
+        <div class="rectangle-bounce5"></div>
+    </div>
+</div>
+<div class="div">
+    <div class="div-wrap1">
+        <div class="throwing1"></div>
+        <div class="throwing2"></div>
+    </div>
+</div>
+<div class="div">
+    <div class="div-wrap2">
+        <div class="boom1"></div>
+    </div>
+</div>
+<div class="div">
+    <div class="div-wrap3">
+        <div class="rotating1"></div>
+        <div class="rotating2"></div>
+    </div>
+</div>
+<div class="div">
+    <div class="div-wrap4">
+        <div class="load1"></div>
+        <div class="load2"></div>
+        <div class="load3"></div>
+    </div>
+</div>
+<div class="div">
+    <div class="div-wrap5">
+        <div class="div-wrap5-div1"></div>
+        <div class="div-wrap5-div2"></div>
+        <div class="div-wrap5-div3"></div>
+        <div class="div-wrap5-div4"></div>
+        <div class="div-wrap5-div5"></div>
+        <div class="div-wrap5-div6"></div>
+        <div class="div-wrap5-div7"></div>
+        <div class="div-wrap5-div8"></div>
+    </div>
+</div>
+<div class="div">
+    <div class="div-wrap6">
+        <ul>
+            <li class="div-wrap6-li3"></li>
+            <li class="div-wrap6-li2"></li>
+            <li class="div-wrap6-li1"></li>
+         </ul>
+        <ul>
+            <li class="div-wrap6-li4"></li>
+            <li class="div-wrap6-li3"></li>
+            <li class="div-wrap6-li2"></li>
+        </ul>
+        <ul>
+            <li class="div-wrap6-li5"></li>
+            <li class="div-wrap6-li4"></li>
+            <li class="div-wrap6-li3"></li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
