@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="Keywords" content="驴妈妈无线,景区门票,旅游度假"/>
+    <meta name="Description" content="驴妈妈无线官网:支持手机快捷预订景区门票,自助游线路,全国酒店,豪华邮轮等各种旅游产品.(中国最领先的在线旅游预订服务商!)"/>
+    <meta content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" name="viewport">
+     <meta id="share" share-linkurl="这里填写分享链接" name="share" share-title="这里添加分享标题" share-content="这里添加分享内容" share-imageurl="这里添加分享图片">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="max-age=7200" />
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="apple-touch-icon" href="http://pic.lvmama.com/img/mobile/touch/img/lvmama_v1_png.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="http://pic.lvmama.com/img/mobile/touch/img/lvmama_v1_png.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="http://pic.lvmama.com/img/mobile/touch/img/lvmama_v1_png.png"/>
+    <link rel="apple-touch-icon" sizes="144x144" href="http://pic.lvmama.com/img/mobile/touch/img/lvmama_v1_png.png"/>
+    <link rel="shortcut icon" href="http://www.lvmama.com/favicon.ico" type="image/x-icon">
+    <!--公共样式-->
+    <link rel="stylesheet" href="http://pic.lvmama.com/mobile/zt/public/css/base/newGlobal.css">
+    <!--专题样式-->
+    <link rel="stylesheet" href="style/index.css">
+</head>
+<body>
+<!--分享图片-->
+<div style="width:0; height:0; overflow: hidden; font-size: 0; position: fixed; left: 0;top: 0;"><img src="share.jpg" alt=""/></div>
+<!--统一导航-->
+<!-- <script type="text/javascript" src="http://pic.lvmama.com/mobile/zt/public/js/base/ztheader.js"></script> -->
+<!--主体内容-->
+<div id="container">
+    <div id="content">
+        <header>
+            <img src="./image/header.jpg" alt="logo">
+            <img src="./image/title.jpg" alt="title">
+        </header>
+        <div class="main">
+            <!-- t-shirt -->
+            <div class="T_shirt">
+                <img src="./image/shirt_head.jpg" alt="t-shirt head">
+                <img src="./image/shirt_body.jpg" alt="t-shirt body">
+                <img src="./image/shirt_footer.jpg" alt="t-shirt foot">
+            </div>
+            <!-- 定制 -->
+            <div class="T-custom">
+                <img src="./image/bg_one.jpg" alt="">
+                <img src="./image/bg_two.jpg" alt="">
+                <div class="advert">
+                    <img src="./image/advert.png" alt="">
+                </div>
+                <div class="T-rule">
+                    <img src="./image/font.png" alt="">
+                </div>
+                <div class="btn">
+                    <a href="">
+                        <img src="./image/dingzhi.png" alt="">
+                    </a>
+                </div>
+                 <div class="icon">
+                    <img src="./image/lvmama.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="http://pic.lvmama.com/mobile/lib/js/zepto.min.js"></script>
+<!-- <script type="text/javascript" src="http://s2.lvjs.com.cn/js/new_v/jquery-1.7.2.min.js"></script> -->
+<!--公共JS-->
+<script type="text/javascript" src="http://pic.lvmama.com/mobile/zt/public/js/base/newBase.js"></script>
+<!--专题JS-->
+<script type="text/javascript" src="js/index.js"></script>
+<!--下载条-->
+<script type="text/javascript" src="http://pic.lvmama.com/mobile/plugins/nativeJs/downloadBar/1.0/build.min.js"></script>
+<!-- 二次分享js -->
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="http://pic.lvmama.com/mobile/plugins/nativeJs/share/1.0/code.min.js"></script>
+<!--统计码-->
+<script type="text/javascript" src="http://pic.lvmama.com/mobile/zt/3.0.0/js/mlosc.js" charset="utf-8"></script>
+<!-- 自定义脚本 -->
+<script type="text/javascript">
+
+     $(document).ready(function(){
+    
+        $('#container').height($(window).height());
+        // 兼容ipad图片之间产生空白行
+        let getIpadType = function(){
+            if (navigator.userAgent.indexOf("ipad")) {
+                return 'ipad';
+            }else{
+                return 'other';
+            }
+        }
+        if (getIpadType() == 'ipad') {
+            $('img').css('margin-top','-1px');
+        }
+
+   });
+</script>
+</body>
+</html>
