@@ -1,0 +1,142 @@
+*{margin: 0;padding: 0;}
+img { width: 100%;display: block;}
+input,button{ border: none; border-radius: 0; background: none; outline: none; }
+a{ display: block;}
+html { font-family: "microsoft yahei", "Arial"; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; width: 100%; height: 100%; font-size: 62.5%;}
+body { min-width: 320px; width: 100%; height: 100%; margin: 0 auto; background: #ffefef;
+    tap-highlight-color: rgba(0,0,0,0); 
+    focus-focus-ring-color: rgba(0, 0, 0, 0); 
+    -webkit-tap-highlight-color: rgba(0,0,0,0); 
+    -webkit-focus-ring-color: rgba(0, 0, 0, 0);}
+
+.banner{ background:#bbd00b;height: 13rem;}
+.coupons{ padding: 1rem;width: 100%;margin: 0 auto;}
+
+.list-group{
+	width:100%;
+	background: #ffefef;
+}
+
+.list-item{
+	display: block;
+	margin-bottom: 1.2rem;
+	position: relative;
+	height: 6rem;
+	overflow: auto;
+}
+
+.item-left,.item-right{
+	height: 100%;
+	float: left;
+}
+.list-item .item-left{
+	width: 75%;
+	background: url('../images/leftbg.png');
+	background-size: 100% 100%;
+}
+.list-item .item-right{
+	position: relative;
+	width: 25%;
+	background: url('../images/right.png');
+	background-size: 100% 100%;
+}
+
+.left_bg,.right_bg{
+	width: 100%;
+	height: auto;
+}
+.price,.item-classify,.item-label,.item-rule,.item-overtime{
+	position: absolute;
+}
+.item-classify{
+	font-weight: bold;
+	color:white;
+	left:0.4rem;
+	top:0.6rem;
+	font-size: 1.4rem;
+	font-weight: bold;
+}
+.price{
+	left:1.2rem;
+	top:3rem;
+	color:#fcff00;
+	font-size: 1.6rem;
+
+}
+.price i{
+	display: inline-block;
+	font-size: 1.8rem;
+}
+.item-label{
+	top:0.6rem;
+	left:29%;
+}
+.item-label label{
+	border:1px solid #fedbad;
+	padding: 0 0.6rem;
+	color:#fedbad;
+	font-size: 0.5rem;
+}
+.item-rule,.item-overtime{
+	left:29%;
+	color:#ffdbef;
+	font-size: 0.5rem;
+}
+.item-rule{
+	top:2rem;
+}
+.item-overtime{
+	top:3.2rem;
+}
+.item-overtime p{
+	font-size: 0.6rem;
+}
+.receive-btn,.received-btn{
+	margin: 0 auto;
+    position: absolute;
+    text-align: center;
+   
+}
+.receive-btn{
+	top: 33%;
+    width: 80%;
+    background: url('../images/btn.png');
+    background-size: 100% 100%;
+     margin-left: 10%;
+     color:#ff4268;
+     font-weight: bold;
+}
+.received-btn{
+	width:100%;
+	height:100%;
+	color:#ffe4ea;
+	background: url('../images/icon.png');
+	background-size: 100% 100%;
+}
+.received-btn label{
+	position: relative;
+	top:36%;
+}
+// .coupons .list{ margin-bottom: 1rem; position: relative;}
+// .coupons .list button{ position: absolute; top: 50%; right: 3.5%;
+//     -webkit-transform:translateY(-50%); transform:translateY(-50%);}
+// .coupons .list button.receive{ background: url(http://pic.lvmama.com/mobile/zt/WeChat/380coupons/images/btn1.png); -webkit-background-size: 100% 100%; background-size: 100% 100%; width: 5rem; height: 1.6rem; right: 2.8%;}
+// .coupons .list button.already_receive{ background: url(http://pic.lvmama.com/mobile/zt/WeChat/380coupons/images/btn2.png); -webkit-background-size: 100% 100%; background-size: 100% 100%; width: 4.5rem; height: 4.5rem;}
+.coupon_footer{ padding: 2rem 0 4rem;}
+
+.success_popup{ width: 100%; height: 100%; position: fixed; top: 0; left: 0; background: rgba(0,0,0,0.7); display: none;}
+.success_popup .main{ position: absolute; top: 50%; left: 50%; width: 85%; text-align: center; 
+    -webkit-transform:translate(-50%,-50%); transform:translate(-50%,-50%); background: #fff;}
+.success_popup .main h3{ background: url(http://pic.lvmama.com/mobile/zt/WeChat/380coupons/images/popup_bg.png); -webkit-background-size: 100% 100%; background-size: 100% 100%;
+    font-size: 2rem; color: #fff; line-height: 4.5rem;}
+.success_popup .main p{ font-size: 1.2rem; color: #333; line-height: 3rem; margin-top: 1rem;}
+.success_popup .main button{ height: 3.5rem; font-size: 2.1rem; color: #fff; border-radius: 20px; background: #f32e4a; padding: 0 4rem; margin: 1.5rem 0; font-weight: bold;}
+
+
+
+
+
+
+
+
+
