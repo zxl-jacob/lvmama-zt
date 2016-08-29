@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<p id="help">Helpful notes will appear here</p>
+	<p>E-mail: <input type="text" id="email" name="email"></p>
+	<p>Name: <input type="text" id="name" name="name"></p>
+	<p>Age: <input type="text" id="age" name="age"></p>
+	<script>
+		window.onload = function(){
+			// 配置信息说明:id + infor
+			
+			class Verification{
+				
+
+				constructor(config){
+					this.information = config;
+				}
+				// the home method
+				home(){
+
+					for(let item of this.information){
+
+						document.getElementById(item.id).onfocus = this.inforCallback(item.Infor);
+
+					}
+
+				}
+				// return the callback
+				inforCallback(infor){
+					var showInfor = function(infor){
+						document.getElementById('help').innerHTML = infor;
+					}
+					return function(){
+						showInfor(infor)
+					};
+
+				}
+			}
+			var infors=[
+					{'id': 'email', 'Infor': 'Your e-mail address'},
+			      	{'id': 'name', 'Infor': 'Your full name'},
+			      	{'id': 'age', 'Infor': 'Your age (you must be over 16)'},
+				];
+
+			var Verifi= new Verification(infors);
+			Verifi.home();
+
+
+
+
+			// function showHelp(Infor) {
+		 //  		document.getElementById('help').innerHTML = Infor;
+			// }
+
+			// function makeHelpCallback(Infor) {
+			//   return function() {
+			//     showHelp(Infor);
+			//   };
+			// }
+
+			// function setupHelp() {
+			//   var helpText = [
+			//       {'id': 'email', 'Infor': 'Your e-mail address'},
+			//       {'id': 'name', 'Infor': 'Your full name'},
+			//       {'id': 'age', 'Infor': 'Your age (you must be over 16)'}
+			//     ];
+
+			//   for (var i = 0; i < helpText.length; i++) {
+			//     var item = helpText[i];
+			//     document.getElementById(item.id).onfocus = makeHelpCallback(item.Infor);
+			//   }
+			// }
+
+			// setupHelp();
+		}
+
+	</script>
+</body>
+</html>
