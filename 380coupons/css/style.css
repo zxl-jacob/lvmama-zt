@@ -16,112 +16,100 @@ body { min-width: 320px; width: 100%; height: 100%; margin: 0 auto; background: 
 	width:100%;
 	background: #ffefef;
 }
-
+	
 .list-item{
-	display: block;
-	margin-bottom: 1.2rem;
+	width: 100%;
 	position: relative;
-	height: 6rem;
-	overflow: auto;
+	margin-bottom: 1rem;
 }
-
-.item-left,.item-right{
-	height: 100%;
+.list-item::after{
+	content: '';
+	display: table;
+	clear: both;
+}
+.list-item::after{
+	*zoom: 1;
+}
+.item-left-piture,.item-right-picture{
+	height: auto;
 	float: left;
 }
-.list-item .item-left{
-	width: 75%;
-	background: url('../images/leftbg.png');
-	background-size: 100% 100%;
+.item-left-piture{
+	width: 77.5%;
 }
-.list-item .item-right{
+.item-right-picture{
 	position: relative;
-	width: 25%;
-	background: url('../images/right.png');
-	background-size: 100% 100%;
+	width: 22%;
 }
-
-.left_bg,.right_bg{
-	width: 100%;
-	height: auto;
-}
-.price,.item-classify,.item-label,.item-rule,.item-overtime{
+.item-classify,.item-price{
 	position: absolute;
+	font-weight: bold;
+	left:5%;
 }
 .item-classify{
-	font-weight: bold;
+	top:20%;
+}
+.item-classify label{
 	color:white;
-	left:0.4rem;
-	top:0.6rem;
-	font-size: 1.4rem;
-	font-weight: bold;
+	font-size: 4.7vw;
 }
-.price{
-	left:1.2rem;
-	top:3rem;
+.item-price{
+	top:52.5%;
 	color:#fcff00;
-	font-size: 1.6rem;
-
+	margin-top: 2vw;
+	font-size: 5.5vw;
 }
-.price i{
-	display: inline-block;
-	font-size: 1.8rem;
+.item-price i{
+	font-size: 6.8vw;
+	vertical-align: top;
+}
+.item-rule,.item-label,.item-overtime{
+	position: absolute;	
+	font-size: 3.1vw;
+	left: 34%;
+	color:#ffe8ed
 }
 .item-label{
-	top:0.6rem;
-	left:29%;
+    top: 20%;
 }
-.item-label label{
-	border:1px solid #fedbad;
-	padding: 0 0.6rem;
-	color:#fedbad;
-	font-size: 0.5rem;
-}
-.item-rule,.item-overtime{
-	left:29%;
-	color:#ffdbef;
-	font-size: 0.5rem;
+.item-label span{
+	color: #feffbc;
+    padding: 0 1rem;
+    border: 1px solid #feffbc;
 }
 .item-rule{
-	top:2rem;
+    top:45.5%;
 }
 .item-overtime{
-	top:3.2rem;
+	top:67.5%;
 }
-.item-overtime p{
-	font-size: 0.6rem;
+.item-right-btn img{
+	position: absolute;
+	width: 80%;
 }
-.receive-btn,.received-btn{
-	margin: 0 auto;
-    position: absolute;
-    text-align: center;
-   
+
+.btn1-pic{
+	left:10%;
+	top:40%;
 }
-.receive-btn{
-	top: 33%;
-    width: 80%;
-    background: url('../images/btn.png');
-    background-size: 100% 100%;
-     margin-left: 10%;
-     color:#ff4268;
-     font-weight: bold;
+.btn2-pic{
+	top: 10%;
+    left: 10%;
 }
-.received-btn{
-	width:100%;
-	height:100%;
-	color:#ffe4ea;
-	background: url('../images/icon.png');
-	background-size: 100% 100%;
+	
+@media screen and (max-device-width: 320px) {
+	.item-classify,.item-price{
+		position: absolute;
+		font-weight: bold;
+		left:3%;
+	}
+	.item-rule,.item-label,.item-overtime{
+		position: absolute;	
+		font-size: 3.1vw;
+		left: 30%;
+		color:#ffe8ed
+	}
 }
-.received-btn label{
-	position: relative;
-	top:36%;
-}
-// .coupons .list{ margin-bottom: 1rem; position: relative;}
-// .coupons .list button{ position: absolute; top: 50%; right: 3.5%;
-//     -webkit-transform:translateY(-50%); transform:translateY(-50%);}
-// .coupons .list button.receive{ background: url(http://pic.lvmama.com/mobile/zt/WeChat/380coupons/images/btn1.png); -webkit-background-size: 100% 100%; background-size: 100% 100%; width: 5rem; height: 1.6rem; right: 2.8%;}
-// .coupons .list button.already_receive{ background: url(http://pic.lvmama.com/mobile/zt/WeChat/380coupons/images/btn2.png); -webkit-background-size: 100% 100%; background-size: 100% 100%; width: 4.5rem; height: 4.5rem;}
 .coupon_footer{ padding: 2rem 0 4rem;}
 
 .success_popup{ width: 100%; height: 100%; position: fixed; top: 0; left: 0; background: rgba(0,0,0,0.7); display: none;}
@@ -131,12 +119,3 @@ body { min-width: 320px; width: 100%; height: 100%; margin: 0 auto; background: 
     font-size: 2rem; color: #fff; line-height: 4.5rem;}
 .success_popup .main p{ font-size: 1.2rem; color: #333; line-height: 3rem; margin-top: 1rem;}
 .success_popup .main button{ height: 3.5rem; font-size: 2.1rem; color: #fff; border-radius: 20px; background: #f32e4a; padding: 0 4rem; margin: 1.5rem 0; font-weight: bold;}
-
-
-
-
-
-
-
-
-
