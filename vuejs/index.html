@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>vuejs</title>
+	<script src='./vuejs.js'></script>
+</head>
+<style>
+	button { 
+		color: inherit;
+		background: ;
+		border: none;
+	}
+</style>
+<body>
+
+	<button v-on:click='reverseMessage'>{{ message }}</button>
+	<ul>
+		<li v-for="item in todoData">
+			<span> {{ item.text }} </span>
+			<button v-on:click='removeTodo($index)'> x </button>
+		</li>
+		
+	</ul>
+	<input v-model="newTodo" v-on:keyup.enter="addTodo" type="text">
+</body>
+</html>
+<script>
+
+	new Vue({
+        el: 'body',
+        data: {
+        	newTodo: '', 
+        	message: 'hello vue',
+        	todoData: []
+        },
+        methods:{
+        	reverseMessage: function () {
+
+        		this.message = this.message.split('').reverse().join('');
+
+        	},
+        	addTodo: function () {
+
+        		var text = this.newTodo.trim();
+
+        		if (text) {
+
+        			this.todoData.push({ 'text' : text });
+
+        			this.newTodo = '';
+
+        		}
+        	},
+        	removeTodo: function (index) {
+
+        		this.todoData.splice(index,1);
+
+        	}
+        }
+	})
+	
+</script>

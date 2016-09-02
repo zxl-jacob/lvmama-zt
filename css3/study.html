@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>监听浏览器变化设置rem的值，实现自适应</title>
+</head>
+<body>
+	<p></p>
+	<script>
+
+		 (function (doc, win) {
+           	var docEl = doc.documentElement,
+           		// 判断设备是旋转还是窗口改变
+             	resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+
+             	resetfont = function () {
+               		var clientWidth = docEl.clientWidth;
+               		if (!clientWidth) return;
+               		docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+               		var p = docEl.getElementsByTagName('p')[0].innerHTML = "当前字体的大小为" + (20 * (clientWidth / 320)) + 'px' ;
+             	};
+ 
+           	if (doc.addEventListener){
+           		win.addEventListener(resizeEvt, resetfont, false);
+           		doc.addEventListener('DOMContentLoaded', resetfont, false);
+           	} else if (doc.attachEvent) {
+           		win.attachEvent()
+           	}
+        })(document, window);
+
+	</script>
+</body>
+</html>

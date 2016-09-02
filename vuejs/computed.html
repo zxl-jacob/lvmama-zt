@@ -1,0 +1,45 @@
+<!-- 
+@ vuejs 数据绑定是响应的
+@computed 用于计算
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>databind</title>
+	<script src='./vuejs.js'></script>
+</head>
+<body>
+	<div class="app">
+		<span>
+			{{ PersonMessage.firstname }}
+		</span>
+	</div>
+	<script>
+	    
+		var app = new Vue({
+			el: '.app',
+			data: {
+				PersonMessage: 
+				{
+					firstname:'zhao',
+					lastname: 'xinglai'
+				}
+			},
+			computed: {
+				fullname: {
+					get: function () {
+						return this.PersonMessage.firstname + ' ' + this.PersonMessage.lastname;
+					},
+					set: function (newvalue) {
+						var personArray = newvalue.split(' ');
+						this.PersonMessage.firstname = personArray[0];
+						this.PersonMessage.lastname = personArray[1];
+					}
+				}
+			}
+		})
+		app.fullname = 'yang fan';
+	</script>
+</body>
+</html>
