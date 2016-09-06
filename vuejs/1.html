@@ -1,17 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- @class 和style 绑定 -->
+<!-- @条件渲染： v-if  -->
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<script src='./vuejs.js'></script>
 </head>
 <body>
+	<!-- style 和 class -->
 	<div class="app">
-		
+		<div class="static" v-bind:class="{'class-a': isA,'class-b': isB}">
+		</div>
+		<div v-bind:class="[isA ? classa : classb, classc]">
+			
+		</div>
+		<div v-bind:style="{color: color,font-size: font}">
+			
+		</div>
+	</div>
+	<div id="#container">
+		<h1 v-if="false">Yes</h1>
 	</div>
 	<script>
-		
+		var app = new Vue({
+			el: '.app',
+			data: {
+				isA: true,
+				isB: false,
+				classa: 'classa',
+				classb: 'classb',
+				classc: 'classc',
+				styleObject: {
+					color: '#111',
+					font: '12px'
+				}
+			}
+		});
+		var con = new Vue({
+			el: '#container',
+			data: {
+				statics: false
+			}
+		})
 	</script>
 </body>
 </html>
